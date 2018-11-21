@@ -1,0 +1,20 @@
+<!-- Section -->
+<section id="first" class="main special">
+    <h2>{{ include.section.title }}</h2>
+    {{ include.section.subtitle | markdownify }}
+
+    <!-- Note: If you have an odd number of icons, change the class below to "features odd" -->
+    
+    {% for feature in include.section.features_list %}
+    {% if forloop.first %}
+    <ul class="features {% assign expr_1 = forloop.length | modulo: 2 %}{% unless (expr_1 == 0) %}odd{% endunless %}">
+    {% endif %}
+        <li>
+            <span class="icon major {{ feature.icon }}"></span>
+            <h3>{{ feature.title }}</h3>
+        </li>
+    {% if forloop.last %}
+    </ul>
+    {% endif %}
+    {% endfor %}
+</section>

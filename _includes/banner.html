@@ -1,0 +1,19 @@
+<!-- Banner -->
+<section id="banner">
+    <div class="image filtered" data-position="center">
+        {% if page.banner.img_path %}
+        <img src="{{ page.banner.img_path | relative_url }}" alt="" />
+        {% endif %}
+    </div>
+    <div class="content">
+        <h1>{{ page.banner.title }}</h1>
+        {{ page.banner.subtitle | markdownify }}
+        {% if page.banner.actions %}
+            <ul class="actions special">
+                {% for action in page.banner.actions %}
+                    <li><a href="{% assign expr_1 = action.url | starts_with: '#' %}{% if expr_1 %}{{ action.url }}{% else %}{{ action.url | link | relative_url }}{% endif %}" class="button wide{% if action.is_primary %} primary{% endif %}{% if action.is_scrolly %} scrolly{% endif %}">{{ action.label }}</a></li>
+                {% endfor %}
+            </ul>
+        {% endif %}
+    </div>
+</section>

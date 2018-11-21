@@ -1,0 +1,15 @@
+---
+layout: body
+---
+
+<!-- Section -->
+<section class="main">
+    <header class="invert accent2">
+        <h1>{{ page.title }}</h1>
+        {{ page.subtitle | markdownify }}
+    </header>
+    {% if page.content_img_path %}
+        <span class="image main filtered"><img src="{{ page.content_img_path | relative_url }}" alt="" /></span>
+    {% endif %}
+    {{ content }}
+</section>

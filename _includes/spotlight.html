@@ -1,0 +1,19 @@
+<!-- Spotlight -->
+<section class="main{% if include.section.img_path %} spotlight{% endif %} {{ include.section.text_position }} invert accent1">
+    {% if include.section.img_path %}
+        <div class="image filtered" data-position="center">
+            <img src="{{ include.section.img_path | relative_url }}" alt="" />
+        </div>
+    {% endif %}
+    <div class="content">
+        <h2>{{ include.section.title }}</h2>
+        {{ include.section.subtitle | markdownify }}
+        {% if include.section.actions %}
+            <ul class="actions">
+                {% for action in include.section.actions %}
+                    <li><a href="{% assign expr_1 = action.url | starts_with: '#' %}{% if expr_1 %}{{ action.url }}{% else %}{{ action.url | link | relative_url }}{% endif %}" class="button{% if action.is_primary %} primary{% endif %}{% if action.is_scrolly %} scrolly{% endif %}">{{ action.label }}</a></li>
+                {% endfor %}
+            </ul>
+        {% endif %}
+    </div>
+</section>

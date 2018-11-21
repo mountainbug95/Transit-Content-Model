@@ -1,0 +1,17 @@
+<!-- Section -->
+<section class="main special">
+    <h2>{{ include.section.title }}</h2>
+    {{ include.section.subtitle | markdownify }}
+    <ul class="contact-icons">
+        {% for link in include.section.contact_links %}
+        <li>
+            <span class="icon major alt {{ link.icon }}"></span>
+            {% if link.enable_url %}
+            <p><a href="{{ link.link_url }}">{{ link.text | newline_to_br }}</a></p>
+            {% else %}
+            <p>{{ link.text | newline_to_br }}</p>
+            {% endif %}
+        </li>
+        {% endfor %}
+    </ul>
+</section>

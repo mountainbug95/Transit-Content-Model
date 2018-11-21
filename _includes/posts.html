@@ -1,0 +1,24 @@
+<!-- Section -->
+<section class="main special">
+    <h2>{{ include.section.title }}</h2>
+    {{ include.section.subtitle | markdownify }}
+    <div class="slider-wrapper">
+        <div class="slider">
+            {% assign arr = include.site.posts | sort: 'date' | reverse %}
+            {% for post in arr %}
+            <article {% if post.is_initial %}class="initial"{% endif %}>
+                <a href="{{ post.url | relative_url }}" class="image filtered">
+                    {% if post.alt_img_path %}
+                    <img src="{{ post.alt_img_path }}" alt="" />
+                    {% else %}
+                    <h2 style="margin-bottom: 0">{{ post.title }}</h2>
+                    {% endif %}
+                </a>
+                <div class="content">
+                    {{ post.excerpt | markdownify }}
+                </div>
+            </article>
+            {% endfor %}
+        </div>
+    </div>
+</section>
