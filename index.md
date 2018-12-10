@@ -24,7 +24,7 @@ sections:
       - title: Phasellus
         icon: fa-flag-o
     component: features.html
-    type: features
+    template: features
   - title: Magna amet lorem
     subtitle: >-
       Sed magna lorem ipsum etiam dolor et nullam consequat, et feugiat tempus
@@ -37,19 +37,19 @@ sections:
         is_scrolly: false
         is_primary: false
     component: spotlight.html
-    type: spotlight
+    template: spotlight
   - title: Etiam amet consequat
     subtitle: |-
       Lorem ipsum dolor sit amet nullam consequat, feugiat nisl tempus  
       adipiscing sed cursus. Ipsum tempus phasellus magna.
     component: posts.html
-    type: posts
+    template: posts
   - title: Nullam dolor veroeros
     subtitle: >-
       Sit amet nullam consequat, feugiat nisl tempus adipiscing sed consequat
       cursus.
     component: sign_up.html
-    type: sign_up
+    template: sign_up
   - title: Get in touch
     subtitle: 'Lorem ipsum dolor sit amet nullam consequat, feugiat nisl tempus.'
     contact_links:
@@ -66,7 +66,7 @@ sections:
         enable_url: true
         link_url: '#'
     component: contact.html
-    type: contact
+    template: contact
 menus:
   main:
     title: Home
