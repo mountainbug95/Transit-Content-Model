@@ -23,6 +23,7 @@ fields:
         format: markdown
   - type: text
     name: component
+    label: Section Component
     hidden: true
     default: sign_up.html
     config:
