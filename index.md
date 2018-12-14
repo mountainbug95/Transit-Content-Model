@@ -55,16 +55,17 @@ sections:
     contact_links:
       - icon: fa-envelope-o
         text: information@untitled.tld
-        enable_url: true
         link_url: '#'
+        type: contact_with_link
       - icon: fa-map-o
         text: |-
           1234 Somewhere Road
           Nashville, TN 00000
+        type: contact_no_link
       - icon: fa-mobile
         text: (000) 000-0000
-        enable_url: true
         link_url: '#'
+        type: contact_with_link
     component: contact.html
     template: contact
 menus:

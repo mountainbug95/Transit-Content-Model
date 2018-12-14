@@ -1,0 +1,22 @@
+---
+label: Contact Method With Link
+is_partial: true
+display_field: text
+fields:
+  - type: text
+    name: icon
+    label: Method Icon
+    description: >-
+      (Font Awesome icon) The icon displayed above the contact method
+      description
+    config:
+      required: true
+  - type: textarea
+    name: text
+    label: Contact Method Description
+    description: The text displayed below the contact method icon
+    config:
+      required: true
+  - type: text
+    name: link_url
+    label: URL

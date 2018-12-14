@@ -92,6 +92,7 @@ collections:
           - name: palettes
             widget: hidden
             required: false
+            label: Palettes
   - name: home
     label: Home
     files:
@@ -190,6 +191,7 @@ collections:
                   - name: component
                     widget: hidden
                     required: true
+                    label: Section Component
                     default: features.html
               - name: spotlight
                 widget: object
@@ -235,6 +237,7 @@ collections:
                   - name: component
                     widget: hidden
                     required: true
+                    label: Section Component
                     default: spotlight.html
               - name: posts
                 widget: object
@@ -253,6 +256,7 @@ collections:
                   - name: component
                     widget: hidden
                     required: true
+                    label: Section Component
                     default: posts.html
               - name: sign_up
                 widget: object
@@ -274,6 +278,7 @@ collections:
                   - name: component
                     widget: hidden
                     required: true
+                    label: Section Component
                     default: sign_up.html
               - name: contact
                 widget: object
@@ -325,6 +330,7 @@ collections:
                   - name: component
                     widget: hidden
                     required: true
+                    label: Section Component
                     default: contact.html
           - name: layout
             widget: hidden

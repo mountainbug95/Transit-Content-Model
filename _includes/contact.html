@@ -6,9 +6,9 @@
         {% for link in include.section.contact_links %}
         <li>
             <span class="icon major alt {{ link.icon }}"></span>
-            {% if link.enable_url %}
+            {% if link.type == 'contact_with_link' %}
             <p><a href="{{ link.link_url }}">{{ link.text | newline_to_br }}</a></p>
-            {% else %}
+            {% elsif link.type == 'contact_no_link' %}
             <p>{{ link.text | newline_to_br }}</p>
             {% endif %}
         </li>
