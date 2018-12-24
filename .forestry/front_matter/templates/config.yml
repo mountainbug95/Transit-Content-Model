@@ -3,86 +3,85 @@ label: Config
 hide_body: true
 is_partial: false
 fields:
+- type: text
+  name: title
+  label: Title
+  description: Site title
+  config:
+    required: true
+- type: field_group
+  name: menu
+  label: Menu Configuration
+  fields:
+  - type: field_group_list
+    name: actions
+    label: Menu Action Buttons
+    config:
+      labelField: label
+    fields:
+    - type: include
+      name: include_action
+      label: Action
+      template: action
+- type: field_group
+  name: footer
+  label: Footer Configuration
+  fields:
   - type: text
-    name: title
-    label: Title
-    description: Site title
+    name: copyright
+    label: Copyright Text
+    description: The Copyright text displayed on the left side of the site footer
+  - type: field_group_list
+    name: social_links
+    label: Social Media Icons
+    description: A list of social media icons displayed in the right side of the site
+      footer
     config:
-      required: true
-  - type: field_group
-    name: menu
-    label: Menu Configuration
+      labelField: title
     fields:
-      - type: field_group_list
-        name: actions
-        label: Menu Action Buttons
-        config:
-          labelField: label
-        fields:
-          - type: include
-            name: include_action
-            label: Action
-            template: action
+    - type: text
+      name: title
+      label: Icon Title
+      config:
+        required: true
+    - type: text
+      name: icon
+      label: Icon
+      description: Font Awesome icon
+      config:
+        required: true
+    - type: text
+      name: link_url
+      label: URL
+- type: select
+  name: palette
+  label: Color Palette
+  description: The color palette used for the site
+  config:
+    required: true
+    source:
+      type: custom
+    options:
+    - cyan
+    - magenta
+- type: field_group
+  name: palettes
+  label: Palettes
+  hidden: true
+  fields:
   - type: field_group
-    name: footer
-    label: Footer Configuration
+    name: cyan
+    label: Cyan
     fields:
-      - type: text
-        name: copyright
-        label: Copyright Text
-        description: The Copyright text displayed on the left side of the site footer
-      - type: field_group_list
-        name: social_links
-        label: Social Media Icons
-        description: >-
-          A list of social media icons displayed in the right side of the site
-          footer
-        config:
-          labelField: title
-        fields:
-          - type: text
-            name: title
-            label: Icon Title
-            config:
-              required: true
-          - type: text
-            name: icon
-            label: Icon
-            description: Font Awesome icon
-            config:
-              required: true
-          - type: text
-            name: link_url
-            label: URL
-  - type: select
-    name: palette
-    label: Color Palette
-    description: The color palette used for the site
-    config:
-      required: true
-      source:
-        type: custom
-      options:
-        - cyan
-        - magenta
+    - type: include
+      name: include_palette
+      label: Palette
+      template: palette
   - type: field_group
-    name: palettes
-    label: Palettes
-    hidden: true
+    name: magenta
+    label: Magenta
     fields:
-      - type: field_group
-        name: cyan
-        label: Cyan
-        fields:
-          - type: include
-            name: include_palette
-            label: Palette
-            template: palette
-      - type: field_group
-        name: magenta
-        label: Magenta
-        fields:
-          - type: include
-            name: include_palette
-            label: Palette
-            template: palette
+    - type: include
+      name: include_palette
+      label: Palette
+      template: palette

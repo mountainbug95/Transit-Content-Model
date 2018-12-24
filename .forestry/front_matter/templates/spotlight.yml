@@ -4,47 +4,45 @@ hide_body: true
 is_partial: true
 display_field: title
 fields:
-  - type: text
-    name: title
-    label: Section Title
-    default: Magna amet lorem
-    config:
-      required: true
-  - type: textarea
-    name: subtitle
-    label: Section Subtitle
-    description: The text displayed below the section title
-    default: >-
-      Sed magna lorem ipsum etiam dolor et nullam consequat, et feugiat tempus
-      consequat.
-    config:
-      wysiwyg: true
-      schema:
-        format: markdown
-  - type: file
-    name: img_path
-    label: Spotlight Image
-    description: The image displayed next to the spotlight content
-  - type: select
-    name: text_position
-    label: Content Position
-    description: >-
-      Places the content of the section on either the left or the right side of
-      the page
-    default: left
-    config:
-      source:
-        type: custom
-      options:
-        - left
-        - right
-  - type: list
-    name: actions
-    label: Section Action Buttons
-  - type: text
-    name: component
-    label: Section Component
-    hidden: true
-    default: spotlight.html
-    config:
-      required: true
+- type: text
+  name: title
+  label: Section Title
+  default: Magna amet lorem
+  config:
+    required: true
+- type: textarea
+  name: subtitle
+  label: Section Subtitle
+  description: The text displayed below the section title
+  default: Sed magna lorem ipsum etiam dolor et nullam consequat, et feugiat tempus
+    consequat.
+  config:
+    wysiwyg: true
+    schema:
+      format: markdown
+- type: file
+  name: img_path
+  label: Spotlight Image
+  description: The image displayed next to the spotlight content
+- type: select
+  name: text_position
+  label: Content Position
+  description: Places the content of the section on either the left or the right side
+    of the page
+  default: left
+  config:
+    source:
+      type: custom
+    options:
+    - left
+    - right
+- type: list
+  name: actions
+  label: Section Action Buttons
+- type: text
+  name: component
+  label: Section Component
+  hidden: true
+  default: spotlight.html
+  config:
+    required: true
